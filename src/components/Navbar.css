@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+.wn-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:3rem 3rem;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Brand Logo & Styling */
+.wn-nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.wn-brand-link {
+    
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.wn-logo-graphic {
+  width: 45px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wn-nest-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wn-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.wn-brand-text h2 {
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.wn-nest-bold {
+  font-weight: 700;
+}
+
+.wn-sub-text {
+  color: #ffffff;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Links */
+.wn-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.wn-nav-link {
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.wn-nav-link:hover,
+.wn-nav-link.wn-active-link {
+  color: #ffccd5;
+}
+
+/* Right Actions (Search & Login) */
+.wn-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.wn-search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.wn-search-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.wn-search-form input {
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem 0.6rem 2.4rem;
+  font-size: 0.9rem;
+  width: 240px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: width 0.3s ease;
+}
+
+.wn-search-form input:focus {
+  outline: none;
+  width: 280px;
+}
+
+.wn-login-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #800040;
+  color: #ffffff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.wn-login-btn:hover {
+  background: #600030;
+}
+
+.wn-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .wn-search-form input {
+    width: 180px;
+  }
+  .wn-search-form input:focus {
+    width: 210px;
+  }
+}
+
+@media (max-width: 850px) {
+  .wn-navbar {
+    padding: 1rem 1.5rem;
+    position: relative;
+    background: #1a1a1a;
+  }
+
+  .wn-menu-toggle {
+    display: block;
+  }
+
+  .wn-nav-links,
+  .wn-nav-actions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .wn-nav-links.open,
+  .wn-nav-actions.open {
+    max-height: 400px;
+  }
+
+  .wn-nav-links {
+    top: 100%;
+  }
+
+  .wn-nav-actions {
+    top: calc(100% + 220px);
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .wn-nav-link {
+    color: #333333;
+    padding: 0.8rem 1.5rem;
+    text-shadow: none;
+    border-bottom: 1px solid #f1f1f1;
+    display: block;
+  }
+
+  .wn-search-form input {
+    width: 100%;
+  }
+  .wn-search-form input:focus {
+    width: 100%;
+  }
+
+  .wn-login-btn {
+    text-align: center;
+    justify-content: center;
+  }
+}

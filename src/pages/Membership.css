@@ -1,0 +1,141 @@
+.membership-page {
+  padding: 8rem 1rem;
+}
+
+.membership-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.membership-container h2 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.membership-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
+}
+
+/* Unique Grid for Membership Plans */
+.membership-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Unique Plan Cards */
+.plan-card {
+  background: var(--white);
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured / Popular Plan Highlight */
+.plan-card.plan-card-featured {
+  border-color: var(--primary);
+  border-width: 2px;
+  transform: scale(1.03);
+  position: relative;
+}
+
+.plan-card.plan-card-featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.plan-card h3 {
+  color: var(--primary);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.plan-price {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.plan-features {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.plan-features p {
+  padding: 0.6rem 0;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  border-bottom: 1px dashed #f1f1f1;
+}
+
+/* Distinct Action Buttons */
+.plan-current-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.plan-current-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.plan-submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.plan-submit-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .plan-card.plan-card-featured {
+    transform: none;
+  }
+  .plan-card.plan-card-featured:hover {
+    transform: translateY(-5px);
+  }
+  .membership-container {
+    padding: 1.5rem;
+  }
+}
