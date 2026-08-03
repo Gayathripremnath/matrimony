@@ -5,6 +5,7 @@ import './Navbar.css';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [searchOpen, setSearchOpen] = useState(false);
   const navigate = useNavigate();
 
   const pages = [
@@ -23,6 +24,7 @@ export default function Navbar() {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setSearchOpen(false);
     }
   };
 
@@ -45,6 +47,27 @@ export default function Navbar() {
         </NavLink>
       </div>
 
+      {/* Mobile: Search Icon (left of hamburger) */}
+      <button className="wn-mobile-search-icon" onClick={() => setSearchOpen(!searchOpen)}>
+        ⌕
+      </button>
+
+      {/* Mobile Search Bar Dropdown */}
+      {searchOpen && (
+        <div className="wn-mobile-search-bar">
+          <form onSubmit={handleSearchSubmit}>
+            <input
+              type="text"
+              placeholder="Search Profile ID / Keyword"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              autoFocus
+            />
+            <button type="submit">⌕</button>
+          </form>
+        </div>
+      )}
+
       {/* Hamburger Toggle Button for Mobile */}
       <button className="wn-menu-toggle" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? '✕' : '☰'}
@@ -63,20 +86,24 @@ export default function Navbar() {
             </NavLink>
           </li>
         ))}
+        <li className="wn-mobile-login-item">
+          <NavLink to="/login" className="wn-nav-link wn-mobile-login-link" onClick={handleNavClick}>
+            👤 Login
+          </NavLink>
+        </li>
       </ul>
 
       {/* Right: Search Input & Login Button */}
       <div className={`wn-nav-actions ${isOpen ? 'open' : ''}`}>
-        <form onSubmit={handleSearchSubmit} className="wn-search-form">
+        <form onSubmit={handleSearchSubmit} className="wn-search-form wn-desktop-search">
           <span className="wn-search-icon">⌕</span>
-          <input 
-            type="text" 
-            placeholder="Search Profile ID / Keyword" 
+          <input
+            type="text"
+            placeholder="Search Profile ID / Keyword"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </form>
-
         <NavLink to="/login" className="wn-login-btn" onClick={handleNavClick}>
           <span className="wn-login-icon">👤</span> Login
         </NavLink>

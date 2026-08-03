@@ -158,6 +158,67 @@
   background: #600030;
 }
 
+/* Mobile login nav item — hidden on desktop */
+.wn-mobile-login-item { display: none; }
+
+.wn-mobile-login-link {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #8b0045 !important;
+  font-weight: 700 !important;
+  border-top: 2px solid #f0e0e8;
+  text-shadow: none;
+}
+
+/* Mobile search icon — hidden on desktop */
+.wn-mobile-search-icon {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  margin-left: auto;
+}
+
+/* Mobile search dropdown bar */
+.wn-mobile-search-bar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.wn-mobile-search-bar form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wn-mobile-search-bar input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.wn-mobile-search-bar button {
+  background: #800040;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 .wn-menu-toggle {
   display: none;
   background: none;
@@ -179,11 +240,18 @@
   .wn-navbar {
     padding: 1rem 1.5rem;
     position: relative;
-    background: #1a1a1a;
+    background: #ffffff;
   }
-  .wn-menu-toggle { display: block; }
-  .wn-nav-links,
-  .wn-nav-actions {
+  .wn-brand-text h2 { color: #8b0045; }
+  .wn-sub-text { color: #8b0045; }
+  /* Hide desktop search bar, show mobile icon */
+  .wn-desktop-search { display: none; }
+  .wn-mobile-search-icon { display: block; color: #333; }
+  .wn-mobile-search-bar { display: block; }
+  .wn-menu-toggle { display: block; color: #333; }
+  /* Hide nav-actions entirely on mobile */
+  .wn-nav-actions { display: none !important; }
+  .wn-nav-links {
     position: absolute;
     top: 100%;
     left: 0;
@@ -198,8 +266,7 @@
     box-shadow: 0 10px 15px rgba(0,0,0,0.15);
     z-index: 999;
   }
-  .wn-nav-links.open, .wn-nav-actions.open { max-height: 400px; }
-  .wn-nav-actions { top: calc(100% + 220px); padding: 1rem; box-sizing: border-box; }
+  .wn-nav-links.open { max-height: 400px; }
   .wn-nav-link {
     color: #333333;
     padding: 0.8rem 1.5rem;
@@ -207,9 +274,9 @@
     border-bottom: 1px solid #f1f1f1;
     display: block;
   }
-  .wn-search-form input { width: 100%; }
-  .wn-search-form input:focus { width: 100%; }
-  .wn-login-btn { text-align: center; justify-content: center; }
+  .wn-login-btn { display: none; }
+  /* Show login in nav menu */
+  .wn-mobile-login-item { display: block; }
 }
 
 @media (max-width: 480px) {
