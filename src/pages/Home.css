@@ -1,7 +1,7 @@
 /* Hero Section Layout */
 .hero-slider {
   position: relative;
-  min-height: 100vh;
+  min-height: 75vh;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -95,7 +95,7 @@
 }
 
 .hero-form-header .highlight-text {
-  color: #800040;
+  color: #00ab5b;
 }
 
 .hero-form-header p {
@@ -129,9 +129,9 @@
 .hero-form-row input:focus,
 .hero-form-row select:focus {
   outline: none;
-  border-color: #800040;
+  border-color: #00ab5b;
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(128, 0, 64, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 171, 91, 0.1);
 }
 
 .phone-input-group {
@@ -146,9 +146,9 @@
 }
 
 .phone-input-group:focus-within {
-  border-color: #800040;
+  border-color: #00ab5b;
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(128, 0, 64, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 171, 91, 0.1);
 }
 
 .country-code {
@@ -186,9 +186,9 @@
 }
 
 .gender-option.active {
-  border-color: #800040;
-  color: #800040;
-  background: rgba(128, 0, 64, 0.04);
+  border-color: #00ab5b;
+  color: #00ab5b;
+  background: rgba(0, 171, 91, 0.04);
   font-weight: 600;
 }
 
@@ -206,14 +206,14 @@
 }
 
 .terms-row a {
-  color: #800040;
+  color: #00ab5b;
   text-decoration: underline;
 }
 
 .hero-register-btn {
   width: 100%;
   padding: 0.75rem;
-  background: #800040;
+  background: #00ab5b;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -224,7 +224,7 @@
 }
 
 .hero-register-btn:hover {
-  background: #600030;
+  background: #008244;
 }
 
 .hero-form-footer {
@@ -308,27 +308,63 @@
 .view-profile-btn {
   display: block;
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.6rem;
   margin-top: 0.75rem;
-  background: transparent;
-  border: 1px solid #800040;
-  color: #800040;
-  border-radius: 4px;
+  background: #00ab5b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
   font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0, 171, 91, 0.15);
 }
 
 .view-profile-btn:hover {
-  background: #800040;
+  background: #008244;
+  box-shadow: 0 4px 12px rgba(0, 171, 91, 0.25);
+}
+
+/* Filter Tabs Styling */
+.featured-filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-tab {
+  padding: 0.6rem 1.8rem;
+  border: 1px solid #00ab5b;
+  background: transparent;
+  color: #00ab5b;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-tab.active {
+  background: #00ab5b;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 171, 91, 0.2);
+}
+
+.filter-tab:hover {
+  background: rgba(0, 171, 91, 0.08);
+}
+
+.filter-tab.active:hover {
+  background: #008244;
   color: #ffffff;
 }
 
 /* Features Section */
 .features-section {
-  background: #fff0f3;
+  background: #f2faf6;
   padding: 4rem 2rem;
   margin-top: 4rem;
 }
@@ -350,7 +386,7 @@
 }
 
 .feature-box h3 {
-  color: #800040;
+  color: #00ab5b;
   margin-bottom: 1rem;
 }
 

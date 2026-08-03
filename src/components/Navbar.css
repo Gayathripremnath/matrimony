@@ -99,7 +99,7 @@
 
 .wn-nav-link:hover,
 .wn-nav-link.wn-active-link {
-  color: #ffccd5;
+  color: #d8f3e5;
 }
 
 /* Right Actions (Search & Login) */
@@ -142,7 +142,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background: #800040;
+  background: #00ab5b;
   color: #ffffff;
   padding: 0.6rem 1.5rem;
   border-radius: 8px;
@@ -155,7 +155,7 @@
 }
 
 .wn-login-btn:hover {
-  background: #600030;
+  background: #008244;
 }
 
 /* Mobile login nav item — hidden on desktop */
@@ -164,9 +164,9 @@
 .wn-mobile-login-link {
   display: block;
   padding: 0.8rem 1.5rem;
-  color: #8b0045 !important;
+  color: #00ab5b !important;
   font-weight: 700 !important;
-  border-top: 2px solid #f0e0e8;
+  border-top: 2px solid #e2f5ec;
   text-shadow: none;
 }
 
@@ -210,7 +210,7 @@
 }
 
 .wn-mobile-search-bar button {
-  background: #800040;
+  background: #00ab5b;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -242,8 +242,8 @@
     position: relative;
     background: #ffffff;
   }
-  .wn-brand-text h2 { color: #8b0045; }
-  .wn-sub-text { color: #8b0045; }
+  .wn-brand-text h2 { color: #00ab5b; }
+  .wn-sub-text { color: #00ab5b; }
   /* Hide desktop search bar, show mobile icon */
   .wn-desktop-search { display: none; }
   .wn-mobile-search-icon { display: block; color: #333; }

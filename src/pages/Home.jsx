@@ -21,21 +21,22 @@ const sliderContent = [
 ];
 
 const dummyProfiles = [
-  { id: 1, name: 'Ananya Sharma', age: 25, profession: 'Software Engineer', location: 'Bangalore', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80' },
-  { id: 2, name: 'Rahul Verma', age: 28, profession: 'Investment Banker', location: 'Mumbai', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80' },
-  { id: 3, name: 'Priya Nair', age: 26, profession: 'Doctor', location: 'Kochi', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80' },
-  { id: 4, name: 'Karthik Menon', age: 29, profession: 'Architect', location: 'Chennai', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80' },
-  { id: 5, name: 'Sneha Patel', age: 24, profession: 'UX Designer', location: 'Pune', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80' },
-  { id: 6, name: 'Arjun Krishnan', age: 30, profession: 'IAS Officer', location: 'Delhi', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80' },
-  { id: 7, name: 'Meera Pillai', age: 27, profession: 'CA', location: 'Trivandrum', img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=80' },
-  { id: 8, name: 'Vishnu Das', age: 31, profession: 'Civil Engineer', location: 'Thrissur', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80' },
-  { id: 9, name: 'Lakshmi Raj', age: 25, profession: 'Teacher', location: 'Kozhikode', img: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=500&q=80' },
-  { id: 10, name: 'Arun Kumar', age: 28, profession: 'Entrepreneur', location: 'Hyderabad', img: 'https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=500&q=80' },
+  { id: 1, name: 'Ananya Sharma', age: 25, profession: 'Software Engineer', location: 'Bangalore', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80', gender: 'female' },
+  { id: 2, name: 'Rahul Verma', age: 28, profession: 'Investment Banker', location: 'Mumbai', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80', gender: 'male' },
+  { id: 3, name: 'Priya Nair', age: 26, profession: 'Doctor', location: 'Kochi', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80', gender: 'female' },
+  { id: 4, name: 'Karthik Menon', age: 29, profession: 'Architect', location: 'Chennai', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80', gender: 'male' },
+  { id: 5, name: 'Sneha Patel', age: 24, profession: 'UX Designer', location: 'Pune', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80', gender: 'female' },
+  { id: 6, name: 'Arjun Krishnan', age: 30, profession: 'IAS Officer', location: 'Delhi', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80', gender: 'male' },
+  { id: 7, name: 'Meera Pillai', age: 27, profession: 'CA', location: 'Trivandrum', img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=80', gender: 'female' },
+  { id: 8, name: 'Vishnu Das', age: 31, profession: 'Civil Engineer', location: 'Thrissur', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80', gender: 'male' },
+  { id: 9, name: 'Lakshmi Raj', age: 25, profession: 'Teacher', location: 'Kozhikode', img: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=500&q=80', gender: 'female' },
+  { id: 10, name: 'Arun Kumar', age: 28, profession: 'Entrepreneur', location: 'Hyderabad', img: 'https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=500&q=80', gender: 'male' },
 ];
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [gender, setGender] = useState('male');
+  const [activeFilter, setActiveFilter] = useState('all');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -138,23 +139,47 @@ export default function Home() {
         <h2 className="section-title">Featured Matches</h2>
         <p className="section-subtitle">Handpicked potential profiles matching high compatibility standards</p>
         
+        {/* Filter Tabs */}
+        <div className="featured-filter-tabs">
+          <button 
+            className={`filter-tab ${activeFilter === 'all' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('all')}
+          >
+            All
+          </button>
+          <button 
+            className={`filter-tab ${activeFilter === 'female' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('female')}
+          >
+            Female
+          </button>
+          <button 
+            className={`filter-tab ${activeFilter === 'male' ? 'active' : ''}`}
+            onClick={() => setActiveFilter('male')}
+          >
+            Male
+          </button>
+        </div>
+
         <div className="profiles-grid">
-          {dummyProfiles.map((profile) => (
-            <div key={profile.id} className="profile-card">
-              <img src={profile.img} alt={profile.name} className="profile-img" />
-              <div className="profile-info">
-                <h3>{profile.name}</h3>
-                <p>{profile.age} yrs, {profile.profession}</p>
-                <p>{profile.location}</p>
-                <button 
-                  className="view-profile-btn" 
-                  onClick={() => alert(`Connect request sent to ${profile.name}!`)}
-                >
-                  Connect Now
-                </button>
+          {dummyProfiles
+            .filter((profile) => activeFilter === 'all' || profile.gender === activeFilter)
+            .map((profile) => (
+              <div key={profile.id} className="profile-card">
+                <img src={profile.img} alt={profile.name} className="profile-img" />
+                <div className="profile-info">
+                  <h3>{profile.name}</h3>
+                  <p>{profile.age} yrs, {profile.profession}</p>
+                  <p>{profile.location}</p>
+                  <button 
+                    className="view-profile-btn" 
+                    onClick={() => alert(`Connect request sent to ${profile.name}!`)}
+                  >
+                    Connect Me
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 

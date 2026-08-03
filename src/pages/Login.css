@@ -10,7 +10,7 @@
 
 .login-page {
   min-height: 100vh;
-  background: #fff7fa;
+  background: #f2faf6;
   font-family: "Poppins", sans-serif;
 }
 
@@ -22,7 +22,7 @@
   height: 320px;
   background: linear-gradient(
       rgba(27, 26, 26, 0.55),
-      rgba(214, 51, 132, 0.55)
+      rgba(0, 171, 91, 0.55)
     ),
     url("https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1600&q=80")
       center/cover no-repeat;
@@ -73,7 +73,7 @@
 }
 
 .login-header h2 {
-  color: #d63384;
+  color: #00ab5b;
   font-size: 32px;
   margin-bottom: 10px;
 }
@@ -112,8 +112,8 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #d63384;
-  box-shadow: 0 0 0 4px rgba(214, 51, 132, 0.12);
+  border-color: #00ab5b;
+  box-shadow: 0 0 0 4px rgba(0, 171, 91, 0.12);
 }
 
 /* ===========================
@@ -125,7 +125,7 @@
   height: 52px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #d63384, #ff5ea8);
+  background: linear-gradient(135deg, #00ab5b, #00cc6d);
   color: #fff;
   font-size: 17px;
   font-weight: 600;
@@ -135,7 +135,7 @@
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(214, 51, 132, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 171, 91, 0.3);
 }
 
 /* ===========================
@@ -150,7 +150,7 @@
 }
 
 .login-links a {
-  color: #d63384;
+  color: #00ab5b;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -158,7 +158,7 @@
 }
 
 .login-links a:hover {
-  color: #b0206d;
+  color: #008244;
   text-decoration: underline;
 }
 

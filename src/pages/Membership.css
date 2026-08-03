@@ -2,8 +2,8 @@
 .mem-banner {
   background-image:
   linear-gradient(
-    rgba(96, 5, 50, 0.615),
-    rgba(255, 182, 219, 0.203)
+    rgba(5, 96, 50, 0.615),
+    rgba(182, 255, 219, 0.203)
   ),
   url("https://images.unsplash.com/photo-1583939411023-14783179e581?w=2400&auto=format&fit=crop&q=100");
 
@@ -60,7 +60,7 @@
   text-align: center;
 }
 
-.mem-plans-section h2 { font-size: 2rem; color: #8b0045; margin-bottom: 0.4rem; }
+.mem-plans-section h2 { font-size: 2rem; color: #00ab5b; margin-bottom: 0.4rem; }
 .mem-sub { color: #888; margin-bottom: 2.5rem; font-size: 1rem; }
 
 .mem-plans-grid {
@@ -88,7 +88,7 @@
 .mem-plan-card:hover { transform: translateY(-6px); }
 
 .mem-featured {
-  border: 2px solid #8b0045;
+  border: 2px solid #00ab5b;
   transform: scale(1.03);
 }
 
@@ -99,7 +99,7 @@
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background: #8b0045;
+  background: #00ab5b;
   color: #fff;
   padding: 4px 18px;
   border-radius: 20px;
@@ -108,7 +108,7 @@
   white-space: nowrap;
 }
 
-.mem-plan-card h3 { color: #8b0045; font-size: 1.5rem; margin-bottom: 0.8rem; }
+.mem-plan-card h3 { color: #00ab5b; font-size: 1.5rem; margin-bottom: 0.8rem; }
 
 .mem-price {
   font-size: 2.2rem;
@@ -139,7 +139,7 @@
 .mem-btn-primary {
   width: 100%;
   padding: 0.75rem;
-  background: #8b0045;
+  background: #00ab5b;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -149,14 +149,14 @@
   transition: background 0.3s;
 }
 
-.mem-btn-primary:hover { background: #6b0030; }
+.mem-btn-primary:hover { background: #008244; }
 
 .mem-btn-outline {
   width: 100%;
   padding: 0.75rem;
   background: transparent;
-  color: #8b0045;
-  border: 2px solid #8b0045;
+  color: #00ab5b;
+  border: 2px solid #00ab5b;
   border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -164,13 +164,13 @@
   transition: all 0.3s;
 }
 
-.mem-btn-outline:hover { background: #8b0045; color: #fff; }
+.mem-btn-outline:hover { background: #00ab5b; color: #fff; }
 
 /* ===== STATS ===== */
 .mem-stats-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: linear-gradient(135deg, #6b0030, #8b0045);
+  background: linear-gradient(135deg, #00733c, #00ab5b);
   padding: 3rem 2rem;
   text-align: center;
   gap: 1rem;
@@ -198,7 +198,7 @@
   height: 400px;
 }
 
-.mem-benefits-text h2 { font-size: 1.9rem; color: #8b0045; margin-bottom: 0.8rem; }
+.mem-benefits-text h2 { font-size: 1.9rem; color: #00ab5b; margin-bottom: 0.8rem; }
 .mem-benefits-text > p { color: #666; margin-bottom: 1.5rem; line-height: 1.7; }
 
 .mem-benefit-item {
@@ -208,7 +208,7 @@
   font-size: 0.95rem;
 }
 
-.mem-check { color: #8b0045; font-weight: 700; margin-right: 0.5rem; }
+.mem-check { color: #00ab5b; font-weight: 700; margin-right: 0.5rem; }
 
 /* ===== TESTIMONIALS ===== */
 .mem-testimonials-section {
@@ -217,7 +217,7 @@
   text-align: center;
 }
 
-.mem-testimonials-section h2 { font-size: 2rem; color: #8b0045; margin-bottom: 0.4rem; }
+.mem-testimonials-section h2 { font-size: 2rem; color: #00ab5b; margin-bottom: 0.4rem; }
 
 .mem-testimonials-grid {
   display: grid;
@@ -243,12 +243,12 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 3px solid #8b0045;
+  border: 3px solid #00ab5b;
 }
 
 .mem-stars { color: #f4a61d; font-size: 1.1rem; margin-bottom: 0.8rem; }
 .mem-testimonial-card p { color: #555; font-style: italic; margin-bottom: 0.8rem; line-height: 1.6; font-size: 0.9rem; }
-.mem-testimonial-card h4 { color: #8b0045; font-size: 0.95rem; }
+.mem-testimonial-card h4 { color: #00ab5b; font-size: 0.95rem; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
