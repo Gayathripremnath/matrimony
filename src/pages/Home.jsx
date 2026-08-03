@@ -86,73 +86,60 @@ export default function Home() {
               <h3>Find Your Partner From <span className="highlight-text">2 Lakh+</span> Profiles</h3>
               {/* <p>100% Free matrimonial services</p> */}
             </div>
+<form onSubmit={handleRegisterSubmit}>
+  <div className="hero-form-row">
+    <div className="hero-input-wrapper">
+      <input type="text" placeholder="Full Name" required />
+    </div>
+    <div className="phone-input-group">
+      <span className="country-code">🇮🇳 +91</span>
+      <input type="tel" placeholder="Mobile Number" required />
+    </div>
+  </div>
 
-            <form onSubmit={handleRegisterSubmit}>
-              <div className="hero-form-row">
-                <div className="hero-input-wrapper">
-                  <input type="text" placeholder="Full Name" required />
-                </div>
-                <div className="phone-input-group">
-                  <span className="country-code">🇮🇳 +91</span>
-                  <input type="tel" placeholder="Mobile Number" required />
-                </div>
-              </div>
+  <div className="hero-form-row">
+    <div
+      className={`gender-option ${gender === 'male' ? 'active' : ''}`}
+      onClick={() => setGender('male')}
+    >
+      <span>👤</span> Male
+    </div>
 
-              <div className="hero-form-row">
-                <div 
-                  className={`gender-option ${gender === 'male' ? 'active' : ''}`}
-                  onClick={() => setGender('male')}
-                >
-                  <span>👤</span> Male
-                </div>
-                <div 
-                  className={`gender-option ${gender === 'female' ? 'active' : ''}`}
-                  onClick={() => setGender('female')}
-                >
-                  <span>👤</span> Female
-                </div>
-                <div className="hero-input-wrapper">
-                  <select defaultValue="" required>
-                    <option value="" disabled>Age</option>
-                    <option value="20-25">20 - 25 Years</option>
-                    <option value="25-30">25 - 30 Years</option>
-                    <option value="30-35">30 - 35 Years</option>
-                  </select>
-                </div>
-              </div>
+    <div
+      className={`gender-option ${gender === 'female' ? 'active' : ''}`}
+      onClick={() => setGender('female')}
+    >
+      <span>👤</span> Female
+    </div>
 
-              <div className="hero-form-row">
-                <div className="hero-input-wrapper">
-                  <select defaultValue="" required>
-                    <option value="" disabled>Religion</option>
-                    <option value="hindu">Hindu</option>
-                    <option value="christian">Christian</option>
-                    <option value="muslim">Muslim</option>
-                  </select>
-                </div>
-                <div className="hero-input-wrapper">
-                  <select defaultValue="">
-                    <option value="" disabled>Caste</option>
-                    <option value="any">Any Caste</option>
-                    <option value="general">General</option>
-                  </select>
-                </div>
-              </div>
+    <div className="hero-input-wrapper">
+      <select defaultValue="" required>
+        <option value="" disabled>Age</option>
+        <option value="20-25">20 - 25 Years</option>
+        <option value="25-30">25 - 30 Years</option>
+        <option value="30-35">30 - 35 Years</option>
+      </select>
+    </div>
+    
+  </div>
 
-              <div className="terms-row">
-                <input type="checkbox" id="terms" required />
-                <label htmlFor="terms">
-                  I have read and agree to the <a href="#terms">Terms of Use</a> & <a href="#privacy">Privacy Policy</a>
-                </label>
-              </div>
+  <div className="terms-row">
+    <input type="checkbox" id="terms" required />
+    <label htmlFor="terms">
+      I have read and agree to the <a href="#terms">Terms of Use</a> &{" "}
+      <a href="#privacy">Privacy Policy</a>
+    </label>
+  </div>
+    
+  <button type="submit" className="hero-register-btn" href="/register">
+    Register Free
+  </button>
 
-              <button type="submit" className="hero-register-btn">Register Free</button>
-
-              <div className="hero-form-footer">
-                <span>🎧 Support</span>
-                <span>💬 Chat for assistance</span>
-              </div>
-            </form>
+  <div className="hero-form-footer">
+    <span>🎧 Support</span>
+    <span>💬 Chat for assistance</span>
+  </div>
+</form>
           </div>
         </div>
       </div>

@@ -169,12 +169,10 @@
 
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
-  .wn-search-form input {
-    width: 180px;
-  }
-  .wn-search-form input:focus {
-    width: 210px;
-  }
+  .wn-search-form input { width: 180px; }
+  .wn-search-form input:focus { width: 210px; }
+  .wn-navbar { padding: 2rem 2rem; }
+  .wn-nav-links { gap: 1.5rem; }
 }
 
 @media (max-width: 850px) {
@@ -183,11 +181,7 @@
     position: relative;
     background: #1a1a1a;
   }
-
-  .wn-menu-toggle {
-    display: block;
-  }
-
+  .wn-menu-toggle { display: block; }
   .wn-nav-links,
   .wn-nav-actions {
     position: absolute;
@@ -201,24 +195,11 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+    z-index: 999;
   }
-
-  .wn-nav-links.open,
-  .wn-nav-actions.open {
-    max-height: 400px;
-  }
-
-  .wn-nav-links {
-    top: 100%;
-  }
-
-  .wn-nav-actions {
-    top: calc(100% + 220px);
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-
+  .wn-nav-links.open, .wn-nav-actions.open { max-height: 400px; }
+  .wn-nav-actions { top: calc(100% + 220px); padding: 1rem; box-sizing: border-box; }
   .wn-nav-link {
     color: #333333;
     padding: 0.8rem 1.5rem;
@@ -226,16 +207,14 @@
     border-bottom: 1px solid #f1f1f1;
     display: block;
   }
+  .wn-search-form input { width: 100%; }
+  .wn-search-form input:focus { width: 100%; }
+  .wn-login-btn { text-align: center; justify-content: center; }
+}
 
-  .wn-search-form input {
-    width: 100%;
-  }
-  .wn-search-form input:focus {
-    width: 100%;
-  }
-
-  .wn-login-btn {
-    text-align: center;
-    justify-content: center;
-  }
+@media (max-width: 480px) {
+  .wn-navbar { padding: 0.75rem 1rem; }
+  .wn-brand-text h2 { font-size: 1.4rem; }
+  .wn-sub-text { font-size: 0.65rem; }
+  .wn-logo-graphic { width: 36px; height: 24px; }
 }
