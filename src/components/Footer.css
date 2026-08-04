@@ -46,7 +46,18 @@
 .eb-footer-section ul li a:hover {
   color: var(--white, #fff);
 }
+.footer-logo {
+  width: 190px;   
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
 
+.footer-logo-img  {
+  width: 190px;   
+  height: 100px;
+  object-fit: contain;
+}
 .eb-footer-bottom {
   max-width: 1200px;
   margin: 0 auto;

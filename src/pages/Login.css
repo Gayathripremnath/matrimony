@@ -21,7 +21,7 @@
 .login-banner {
   height: 320px;
   background: linear-gradient(
-      rgba(27, 26, 26, 0.55),
+      rgba(255, 255, 255, 0.83),
       rgba(0, 171, 91, 0.55)
     ),
     url("https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1600&q=80")

@@ -1,36 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {
+  Mail,
+  MessageCircle,
+  Phone,
+  MessageCircleMore
+} from "lucide-react";
+
 import './Home.css';
 
 const sliderContent = [
   {
     image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1600&q=80',
     title: <>Trust Begins With<br />Verified Malayali<br />Profiles</>,
-    description: 'Experience Matchmaking With Confidence Through Our Verified Malayali Profiles. Each Profile is Validated to Ensure Real, Reliable, and Serious Connections For Your Perfect Life Partner'
+    // description: 'Experience Matchmaking With Confidence Through Our Verified Malayali Profiles. Each Profile is Validated to Ensure Real, Reliable, and Serious Connections For Your Perfect Life Partner'
   },
   {
     image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80',
     title: <>Find Your Perfect<br />Match With<br />Complete Security</>,
-    description: 'Browse through thousands of active, hand-screened profiles with advanced privacy controls and secure communication channels designed for your peace of mind.'
+    // description: 'Browse through thousands of active, hand-screened profiles with advanced privacy controls and secure communication channels designed for your peace of mind.'
   },
   {
     image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=80',
     title: <>Begin Your Happy<br />Lifelong Journey<br />With Us</>,
-    description: 'Join a community built on authentic relationships, traditional values, and intelligent matchmaking algorithms tailored to your exact life preferences.'
+    // description: 'Join a community built on authentic relationships, traditional values, and intelligent matchmaking algorithms tailored to your exact life preferences.'
   }
 ];
 
 const dummyProfiles = [
-  { id: 1, name: 'Ananya Sharma', age: 25, profession: 'Software Engineer', location: 'Bangalore', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80', gender: 'female' },
-  { id: 2, name: 'Rahul Verma', age: 28, profession: 'Investment Banker', location: 'Mumbai', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80', gender: 'male' },
-  { id: 3, name: 'Priya Nair', age: 26, profession: 'Doctor', location: 'Kochi', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80', gender: 'female' },
-  { id: 4, name: 'Karthik Menon', age: 29, profession: 'Architect', location: 'Chennai', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80', gender: 'male' },
-  { id: 5, name: 'Sneha Patel', age: 24, profession: 'UX Designer', location: 'Pune', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80', gender: 'female' },
-  { id: 6, name: 'Arjun Krishnan', age: 30, profession: 'IAS Officer', location: 'Delhi', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80', gender: 'male' },
-  { id: 7, name: 'Meera Pillai', age: 27, profession: 'CA', location: 'Trivandrum', img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=80', gender: 'female' },
-  { id: 8, name: 'Vishnu Das', age: 31, profession: 'Civil Engineer', location: 'Thrissur', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80', gender: 'male' },
-  { id: 9, name: 'Lakshmi Raj', age: 25, profession: 'Teacher', location: 'Kozhikode', img: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=500&q=80', gender: 'female' },
-  { id: 10, name: 'Arun Kumar', age: 28, profession: 'Entrepreneur', location: 'Hyderabad', img: 'https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=500&q=80', gender: 'male' },
+  { id: 1, name: 'Ananya Sharma', age: 25, profession: 'Software Engineer', location: 'Bangalore', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80', gender: 'female', profileId: 'WN10293', caste: 'Brahmin' },
+  { id: 2, name: 'Rahul Verma', age: 28, profession: 'Investment Banker', location: 'Mumbai', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80', gender: 'male', profileId: 'WN10294', caste: 'Kshatriya' },
+  { id: 3, name: 'Priya Nair', age: 26, profession: 'Doctor', location: 'Kochi', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80', gender: 'female', profileId: 'WN10295', caste: 'Nair' },
+  { id: 4, name: 'Karthik Menon', age: 29, profession: 'Architect', location: 'Chennai', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80', gender: 'male', profileId: 'WN10296', caste: 'Menon' },
+  { id: 5, name: 'Sneha Patel', age: 24, profession: 'UX Designer', location: 'Pune', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80', gender: 'female', profileId: 'WN10297', caste: 'Patel' },
+  { id: 6, name: 'Arjun Krishnan', age: 30, profession: 'IAS Officer', location: 'Delhi', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80', gender: 'male', profileId: 'WN10298', caste: 'Nair' },
+  { id: 7, name: 'Meera Pillai', age: 27, profession: 'CA', location: 'Trivandrum', img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=80', gender: 'female', profileId: 'WN10299', caste: 'Pillai' },
+  { id: 8, name: 'Vishnu Das', age: 31, profession: 'Civil Engineer', location: 'Thrissur', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80', gender: 'male', profileId: 'WN10300', caste: 'Ezhava' },
+  { id: 9, name: 'Lakshmi Raj', age: 25, profession: 'Teacher', location: 'Kozhikode', img: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=500&q=80', gender: 'female', profileId: 'WN10301', caste: 'Vishwakarma' },
+  { id: 10, name: 'Arun Kumar', age: 28, profession: 'Entrepreneur', location: 'Hyderabad', img: 'https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=500&q=80', gender: 'male', profileId: 'WN10302', caste: 'Mudaliar' },
 ];
 
 export default function Home() {
@@ -169,8 +176,9 @@ export default function Home() {
                 <img src={profile.img} alt={profile.name} className="profile-img" />
                 <div className="profile-info">
                   <h3>{profile.name}</h3>
+                  <p className="profile-id">{profile.profileId}</p>
                   <p>{profile.age} yrs, {profile.profession}</p>
-                  <p>{profile.location}</p>
+                  <p>{profile.caste} • {profile.location}</p>
                   <button 
                     className="view-profile-btn" 
                     onClick={() => alert(`Connect request sent to ${profile.name}!`)}
@@ -184,7 +192,7 @@ export default function Home() {
       </div>
 
       <div className="features-section">
-        <h2 className="section-title" style={{ marginBottom: '1rem' }}>Why Choose WedNest?</h2>
+        <h2 className="section-title" style={{ marginBottom: '1rem' }}>Why Choose KeralakaraMatrimony?</h2>
         <p className="section-subtitle">We guarantee security and trusted matches for a lifelong commitment.</p>
         
         <div className="features-grid">
@@ -202,6 +210,45 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="support-section">
+  <div className="support-item">
+    <Mail size={22} />
+    <div>
+      <h4>Support Request</h4>
+      <p>Raise a support ticket</p>
+    </div>
+  </div>
+
+  <div className="support-item">
+    <MessageCircle size={22} />
+    <div>
+      <h4>Chat For Assistance</h4>
+      <p>We're here to help</p>
+    </div>
+  </div>
+
+  <div className="support-item">
+    <Phone size={22} />
+    <div>
+      <h4>Call Us</h4>
+      <a href="tel:+917034776667">7034776667</a>
+    </div>
+  </div>
+
+  <div className="support-item">
+    <MessageCircleMore size={22} />
+    <div>
+      <h4>WhatsApp</h4>
+      <a
+        href="https://wa.me/917034776667"
+        target="_blank"
+        rel="noreferrer"
+      >
+        7034776667
+      </a>
+    </div>
+  </div>
+</div>
     </div>
   );
 }   

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './Navbar.css';
+import logo from '../assets/logo1.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,7 @@ export default function Navbar() {
     { name: 'Search', path: '/search' },
     { name: 'Membership', path: '/membership' },
     { name: 'Register', path: '/registration' },
+    { name: 'Profiles', path: '/profiles' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -34,16 +36,13 @@ export default function Navbar() {
       <div className="wn-nav-brand">
         <NavLink to="/" className="wn-brand-link">
           <div className="wn-logo-graphic">
-            <svg viewBox="0 0 100 60" className="wn-nest-svg">
-              <path d="M50 10 C 35 10, 20 25, 10 45 C 25 35, 40 30, 50 30 C 60 30, 75 35, 90 45 C 80 25, 65 10, 50 10 Z" fill="#ffffff" />
-              <path d="M15 50 C 35 40, 65 40, 85 50 C 65 55, 35 55, 15 50 Z" fill="#ffffff" />
-              <circle cx="50" cy="18" r="6" fill="#ffffff" />
-            </svg>
-          </div>
-          <div className="wn-brand-text">
-            <h2>Wed<span className="wn-nest-bold">Nest</span></h2>
-            <span className="wn-sub-text">Matrimony</span>
-          </div>
+  <img
+    src={logo}
+    alt="Wedding Nest Logo"
+    className="wn-logo-img"
+  />
+</div>
+         
         </NavLink>
       </div>
 

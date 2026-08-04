@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import logo from '../assets/logo_km1.png';
 
 export default function Footer() {
   return (
@@ -7,7 +8,9 @@ export default function Footer() {
       <div className="eb-footer-content">
         
         <div className="eb-footer-section">
-          <h4>WedNest</h4>
+<div className="footer-logo">
+  <img src={logo} alt="km Logo" className="footer-logo-img" />
+</div>
           <p>
             A trusted matrimony platform dedicated to helping members of our
             community find their perfect life partner through secure and verified

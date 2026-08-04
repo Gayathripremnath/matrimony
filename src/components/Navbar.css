@@ -27,7 +27,18 @@
   display: flex;
   align-items: center;
 }
+.wn-logo-graphic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.wn-logo-img {
+  width: 90px; 
+  margin-left: 230px;     /* adjust as needed */
+  height: 80px;
+  object-fit: contain;
+}
 .wn-brand-link {
     
   display: flex;
@@ -90,7 +101,7 @@
 .wn-nav-link {
   font-family: 'Inter', sans-serif;
   text-decoration: none;
-  color: #ffffff;
+  color: #093c0b;
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s ease;
