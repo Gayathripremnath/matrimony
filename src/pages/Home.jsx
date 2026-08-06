@@ -28,7 +28,7 @@ const sliderContent = [
 ];
 
 const dummyProfiles = [
-  { id: 1, name: 'Ananya Sharma', age: 25, profession: 'Software Engineer', location: 'Bangalore', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80', gender: 'female', profileId: 'WN10293', caste: 'Brahmin' },
+  { id: 1, name: 'Ananya Sharma (WN10293)', age: 25, profession: 'Software Engineer', location: 'Bangalore', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80', gender: 'female', profileId: 'WN10293', caste: 'Brahmin' },
   { id: 2, name: 'Rahul Verma', age: 28, profession: 'Investment Banker', location: 'Mumbai', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80', gender: 'male', profileId: 'WN10294', caste: 'Kshatriya' },
   { id: 3, name: 'Priya Nair', age: 26, profession: 'Doctor', location: 'Kochi', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80', gender: 'female', profileId: 'WN10295', caste: 'Nair' },
   { id: 4, name: 'Karthik Menon', age: 29, profession: 'Architect', location: 'Chennai', img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80', gender: 'male', profileId: 'WN10296', caste: 'Menon' },
@@ -157,7 +157,7 @@ export default function Home() {
       </div>
 
       <div className="section-container">
-        <h2 className="section-title">Featured Matches</h2>
+        <h2 className="section-title1">Featured Matches</h2>
         <p className="section-subtitle">Handpicked potential profiles matching high compatibility standards</p>
         
         {/* Filter Tabs */}
