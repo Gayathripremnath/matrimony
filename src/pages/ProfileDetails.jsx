@@ -5,10 +5,10 @@ import "./ProfileDetails.css";
 export default function ProfileDetails() {
   const { id } = useParams();
 
-  // Temporary Dummy Data
-  const profile = {
-    id: id,
-    name: "Anjali Nair",
+const profiles = [
+  {
+    id: "WN100001",
+    name: "Anjali",
     age: 24,
     height: "5'4\"",
     religion: "Hindu",
@@ -19,18 +19,14 @@ export default function ProfileDetails() {
     location: "Kochi, Kerala",
     maritalStatus: "Never Married",
     motherTongue: "Malayalam",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",
-
-    about:
-      "I am a simple, caring and family-oriented person. I value honesty, respect and relationships. I love travelling, music and spending quality time with family.",
-
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&auto=format&fit=crop&q=60",
+    about: "I am a simple, caring and family-oriented person.",
     family: {
       father: "Business",
       mother: "Homemaker",
       brother: "1 Married Brother",
       sister: "No Sister",
     },
-
     partnerPreference: {
       age: "24 - 30 Years",
       height: "5'3\" - 6'0\"",
@@ -38,38 +34,46 @@ export default function ProfileDetails() {
       education: "Graduate / Post Graduate",
       location: "Kerala Preferred",
     },
-    id: id,
-    name: "Athira ",
-    age: 24,
-    height: "5'4\"",
-    religion: "Hindu",
-    caste: "Nair",
-    education: "MBA",
-    profession: "Software Engineer",
-    income: "₹8 LPA",
-    location: "Kochi, Kerala",
+  },
+
+  {
+    id: "WN100002",
+    name: "Athira",
+    age: 25,
+    height: "5'5\"",
+    religion: "Christian",
+    caste: "Latin Catholic",
+    education: "MBBS",
+    profession: "Doctor",
+    income: "₹12 LPA",
+    location: "Calicut, Kerala",
     maritalStatus: "Never Married",
     motherTongue: "Malayalam",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",
-
-    about:
-      "I am a simple, caring and family-oriented person. I value honesty, respect and relationships. I love travelling, music and spending quality time with family.",
-
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=60",
+    about: "Doctor working in a private hospital.",
     family: {
-      father: "Business",
-      mother: "Homemaker",
-      brother: "1 Married Brother",
-      sister: "No Sister",
+      father: "Teacher",
+      mother: "Nurse",
+      brother: "No Brother",
+      sister: "1 Sister",
     },
-
     partnerPreference: {
-      age: "24 - 30 Years",
-      height: "5'3\" - 6'0\"",
-      religion: "Any",
-      education: "Graduate / Post Graduate",
-      location: "Kerala Preferred",
+      age: "26 - 32 Years",
+      height: "5'6\" - 6'1\"",
+      religion: "Christian",
+      education: "Professional Degree",
+      location: "Kerala",
     },
-  };
+  },
+
+  // WN100003, WN100004 ... similarly
+];
+
+const profile = profiles.find((item) => item.id === id);
+
+if (!profile) {
+  return <h2>Profile Not Found</h2>;
+}
 
   return (
     <div className="profile-details-page">
