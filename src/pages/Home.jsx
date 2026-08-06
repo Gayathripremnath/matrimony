@@ -16,7 +16,7 @@ const sliderContent = [
     // description: 'Experience Matchmaking With Confidence Through Our Verified Malayali Profiles. Each Profile is Validated to Ensure Real, Reliable, and Serious Connections For Your Perfect Life Partner'
   },
   {
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80',
+    image: 'https://images.unsplash.com/photo-1727430256509-0f897d6f4765?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHdlZGRkaW5nfGVufDB8fDB8fHww',
     title: <>Find Your Perfect<br />Match With<br />Complete Security</>,
     // description: 'Browse through thousands of active, hand-screened profiles with advanced privacy controls and secure communication channels designed for your peace of mind.'
   },
@@ -53,10 +53,24 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    age: '',
+  });
+
+  const handleFormChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
-    alert('Quick registration submitted successfully!');
-    navigate('/search');
+    navigate('/registration', {
+      state: {
+        name: formData.name,
+        gender: gender === 'male' ? 'Male' : 'Female',
+      }
+    });
   };
 
   return (
@@ -87,11 +101,11 @@ export default function Home() {
 <form onSubmit={handleRegisterSubmit}>
   <div className="hero-form-row">
     <div className="hero-input-wrapper">
-      <input type="text" placeholder="Full Name" required />
+      <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleFormChange} required />
     </div>
     <div className="phone-input-group">
       <span className="country-code">🇮🇳 +91</span>
-      <input type="tel" placeholder="Mobile Number" required />
+      <input type="tel" name="phone" placeholder="Mobile Number" value={formData.phone} onChange={handleFormChange} required />
     </div>
   </div>
 

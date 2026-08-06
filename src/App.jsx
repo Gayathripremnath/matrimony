@@ -11,6 +11,8 @@ import './App.css';
 import Contact from './pages/Contact';
 import Profiles from './pages/Profile';
 import ProfileDetails from './pages/ProfileDetails';
+import RegistrationDetails from './pages/RegistrationDetails1';
+import RegistrationStep3 from './pages/RegistrationD3';
 
 export default function App() {
   return (
@@ -26,6 +28,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/profiles" element={<Profiles />} />
           <Route path="/profiles/:id" element={<ProfileDetails />} />
+          <Route path="/registration-details" element={<RegistrationDetails />} />
+          <Route path="/registration-details3" element={<RegistrationStep3 />} />
         </Routes>
       </main>
       <Footer />

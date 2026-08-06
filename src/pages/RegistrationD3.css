@@ -1,0 +1,201 @@
+/* ===== BANNER ===== */
+.reg3-banner {
+  background:
+  linear-gradient(
+    135deg,
+    rgba(233, 229, 231, 0.905) 0%,
+    rgba(159, 230, 153, 0.658) 50%,
+    rgba(160, 0, 79, 0.5) 100%
+  ),
+  url("https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1200&auto=format&fit=crop&q=80")
+    center/cover no-repeat;  min-height: 220px;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7rem 1rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.reg3-banner::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+
+.reg3-banner-content { color: #181414; max-width: 700px; z-index: 1; position: relative; }
+.reg3-banner-content h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.6rem; }
+.reg3-banner-content p { font-size: 1rem; opacity: 0.88; }
+
+/* ===== STEP PROGRESS ===== */
+.reg-step-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 420px;
+  margin: -22px auto 0;
+  position: relative;
+  z-index: 20;
+}
+
+.reg-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.reg-step-circle {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 3px solid #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  background: #ccc;
+  color: #fff;
+}
+
+.reg-step-circle.active { background: #8b0045; }
+.reg-step-circle.completed { background: #2cab48; }
+
+.reg-step-label { font-size: 0.7rem; color: #888; font-weight: 600; white-space: nowrap; }
+.reg-step-line { width: 60px; height: 3px; background: #e0e0e0; margin-bottom: 20px; }
+.reg-step-line.done { background: #2cab48; }
+
+/* ===== PAGE ===== */
+.registration3-page {
+  background: #f7f7f7;
+  padding: 40px 20px 60px;
+  min-height: 100vh;
+}
+
+.registration3-container {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.09);
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+  color: #00ab5b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 2rem 0 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0e0e8;
+  text-align: left;
+}
+
+/* ===== FORM ===== */
+.form-group {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.1rem;
+}
+
+.form-group label { font-size: 0.92rem; color: #444; font-weight: 600; line-height: 1.5; }
+.form-group span { color: #e53935; }
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input,
+.form-group select { height: 46px; }
+
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #8b0045;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(139,0,69,0.08);
+}
+
+/* ===== PHONE ROW ===== */
+.phone-row { display: flex; gap: 12px; }
+.phone-row select { width: 150px; height: 46px; }
+.phone-row input { flex: 1; }
+
+/* ===== DIVIDER ===== */
+.section-divider { margin: 2rem 0; border: none; border-top: 1px solid #f0e0e8; }
+
+/* ===== AUTOFILL ===== */
+.autofill { display: flex; justify-content: flex-end; margin: 0.8rem 0 1.5rem; font-size: 0.88rem; }
+.autofill label { display: flex; align-items: center; gap: 8px; color: #555; cursor: pointer; }
+
+/* ===== TERMS ===== */
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 1.5rem 0;
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.checkbox-row input { width: 18px; height: 18px; margin-top: 2px; accent-color: #8b0045; }
+.checkbox-row a { color: #8b0045; text-decoration: none; }
+.checkbox-row a:hover { text-decoration: underline; }
+
+/* ===== BUTTON ===== */
+.register-btn {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  margin: 1.5rem auto 0;
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6b0030, #8b0045);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.register-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .reg3-banner { min-height: 180px; padding: 6rem 1rem 2rem; }
+  .reg3-banner-content h1 { font-size: 1.7rem; }
+  .registration3-container { padding: 1.5rem; }
+  .form-group { grid-template-columns: 1fr; gap: 6px; }
+  .phone-row { flex-direction: column; }
+  .phone-row select { width: 100%; }
+  .register-btn { width: 100%; max-width: 100%; }
+  .reg-step-line { width: 35px; }
+}
+
+@media (max-width: 480px) {
+  .reg3-banner-content h1 { font-size: 1.4rem; }
+  .reg-step-circle { width: 36px; height: 36px; font-size: 0.85rem; }
+  .registration3-page { padding: 20px 10px 40px; }
+}

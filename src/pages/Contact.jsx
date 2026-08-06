@@ -91,9 +91,9 @@ export default function Contact() {
             <h3>Follow Us</h3>
             <div className="contact-socials">
               {[
-                { icon: "📘", label: "Facebook", handle: "@WedNest" },
-                { icon: "📸", label: "Instagram", handle: "@wednest.matrimony" },
-                { icon: "🐦", label: "Twitter", handle: "@WedNestApp" },
+                { icon: "📘", label: "Facebook", handle: "@KeralakaraMatrimony" },
+                { icon: "📸", label: "Instagram", handle: "@Keralakara.Matrimony" },
+                { icon: "🐦", label: "Twitter", handle: "@KeralakaraMatrimony" },
               ].map(s => (
                 <div className="social-item" key={s.label}>
                   <span>{s.icon}</span>

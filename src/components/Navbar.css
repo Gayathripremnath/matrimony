@@ -108,10 +108,10 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.wn-nav-link:hover,
+/* .wn-nav-link:hover,
 .wn-nav-link.wn-active-link {
   color: #d8f3e5;
-}
+} */
 
 /* Right Actions (Search & Login) */
 .wn-nav-actions {

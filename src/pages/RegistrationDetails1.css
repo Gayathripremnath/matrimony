@@ -1,6 +1,6 @@
 /* ===== BANNER ===== */
-.registration-banner {
-  background:
+.details-banner {
+background:
   linear-gradient(
     135deg,
     rgba(233, 229, 231, 0.905) 0%,
@@ -9,7 +9,7 @@
   ),
   url("https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1200&auto=format&fit=crop&q=80")
     center/cover no-repeat; 
-  min-height: 220px;
+     min-height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@
   overflow: hidden;
 }
 
-.registration-banner::before {
+.details-banner::before {
   content: '';
   position: absolute;
   top: -60px; right: -60px;
@@ -28,24 +28,16 @@
   background: rgba(255,255,255,0.05);
 }
 
-.banner-overlay { color: #fff; max-width: 700px; z-index: 1; position: relative; }
-
-.banner-overlay h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-  color: #1f0227;
-}
-
-.banner-overlay p { font-size: 1rem; opacity: 0.88; line-height: 1.6; color: #042d05; }
+.details-banner-content { color: #141111; max-width: 700px; z-index: 1; position: relative; }
+.details-banner-content h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 0.6rem; }
+.details-banner-content p { font-size: 1rem; opacity: 0.88; }
 
 /* ===== STEP PROGRESS ===== */
 .reg-step-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
-  max-width: 720px;
+  max-width: 420px;
   margin: -22px auto 0;
   position: relative;
   z-index: 20;
@@ -59,8 +51,7 @@
 }
 
 .reg-step-circle {
-  width: 44px;
-  height: 44px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -76,30 +67,19 @@
 .reg-step-circle.active { background: #8b0045; }
 .reg-step-circle.completed { background: #2cab48; }
 
-.reg-step-label {
-  font-size: 0.7rem;
-  color: #888;
-  font-weight: 600;
-  white-space: nowrap;
-}
+.reg-step-label { font-size: 0.7rem; color: #888; font-weight: 600; white-space: nowrap; }
 
-.reg-step-line {
-  width: 60px;
-  height: 3px;
-  background: #e0e0e0;
-  margin-bottom: 20px;
-}
-
+.reg-step-line { width: 60px; height: 3px; background: #e0e0e0; margin-bottom: 20px; }
 .reg-step-line.done { background: #2cab48; }
 
-/* ===== FORM SECTION ===== */
-.registration-page {
+/* ===== PAGE ===== */
+.details-page {
   background: #f7f7f7;
   padding: 40px 20px 60px;
 }
 
-.registration-container {
-  max-width: 1000px;
+.details-container {
+  max-width: 1050px;
   margin: auto;
   background: #fff;
   padding: 2.5rem 3rem;
@@ -107,16 +87,17 @@
   box-shadow: 0 8px 30px rgba(0,0,0,0.09);
 }
 
-.registration-container h2 {
+.details-container h2 {
   color: #00ab5b;
   margin: 2rem 0 1.2rem;
   font-size: 1.2rem;
   font-weight: 700;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #f0e0e8;
+  text-align: left;
 }
 
-/* ===== FORM GROUPS ===== */
+/* ===== FORM ===== */
 .form-group {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -125,17 +106,13 @@
   margin-bottom: 1.1rem;
 }
 
-.form-group label {
-  font-size: 0.92rem;
-  color: #444;
-  font-weight: 600;
-}
+.form-group label { font-size: 0.92rem; color: #444; font-weight: 600; }
 
 .form-group input,
-.form-group select {
+.form-group select,
+.form-group textarea {
   width: 100%;
-  height: 46px;
-  padding: 0 14px;
+  padding: 12px 14px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 0.92rem;
@@ -144,26 +121,33 @@
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.form-group input,
+.form-group select { height: 46px; }
+
 .form-group input:focus,
-.form-group select:focus {
-  border-color: #00ab5b;
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #8b0045;
   background: #fff;
   box-shadow: 0 0 0 3px rgba(139,0,69,0.08);
 }
 
-.dob { display: flex; gap: 12px; }
-.dob select { flex: 1; }
+textarea { resize: vertical; }
 
-/* ===== SUBMIT BUTTON ===== */
+.radio-group { display: flex; gap: 2rem; }
+
+hr { margin: 2rem 0; border: none; border-top: 1px solid #f0e0e8; }
+
+/* ===== BUTTON ===== */
 .submit-btn {
   display: block;
   width: 100%;
   max-width: 380px;
   margin: 2rem auto 0;
   height: 52px;
-  background: linear-gradient(135deg, #00ab5b, #0f1a15) !important;
+  background: linear-gradient(135deg, #00ab5b, #8b0045);
   color: #fff;
-  border: none;
+  border: none; 
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 700;
@@ -176,16 +160,15 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .registration-banner { min-height: 180px; padding: 6rem 1rem 2rem; }
-  .banner-overlay h1 { font-size: 1.7rem; }
-  .registration-container { padding: 1.5rem; }
+  .details-banner { min-height: 180px; padding: 6rem 1rem 2rem; }
+  .details-banner-content h1 { font-size: 1.7rem; }
+  .details-container { padding: 1.5rem; }
   .form-group { grid-template-columns: 1fr; gap: 6px; }
-  .dob { flex-direction: column; }
+  .radio-group { flex-direction: column; gap: 0.8rem; }
   .reg-step-line { width: 35px; }
 }
 
 @media (max-width: 480px) {
-  .banner-overlay h1 { font-size: 1.4rem; }
+  .details-banner-content h1 { font-size: 1.4rem; }
   .reg-step-circle { width: 36px; height: 36px; font-size: 0.85rem; }
-  .reg-step-label { font-size: 0.62rem; }
 }
