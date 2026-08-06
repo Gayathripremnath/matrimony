@@ -303,13 +303,15 @@
   font-size: 0.8rem;
   color: #00ab5b;
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin: 0 0 0.4rem 0;
+  padding: 0;
 }
 
 .profile-info p {
   font-size: 0.85rem;
   color: #666;
-  margin-bottom: 0.2rem;
+  margin: 0 0 0.2rem 0;
+  padding: 0;
 }
 
 .view-profile-btn {
