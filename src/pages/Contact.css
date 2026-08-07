@@ -204,6 +204,13 @@ background-repeat: no-repeat;
   margin-top: 0.5rem;
   letter-spacing: 0.5px;
 }
+.cf-submit-btn{
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00733c, #00ab5b);
+  color: #fff;
+  
+}
 
 .cf-submit-btn:hover { opacity: 0.9; transform: translateY(-2px); }
 

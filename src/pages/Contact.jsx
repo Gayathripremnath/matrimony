@@ -28,7 +28,7 @@ export default function Contact() {
         {[
           { icon: "📍", title: "Our Office", lines: ["MG Road, Near Jos Junction", "Ernakulam, Kochi, Kerala 682016"] },
           { icon: "📞", title: "Phone Support", lines: ["+91 (000) 235-0000", "+91 90000 10005 (Toll Free)"] },
-          { icon: "✉️", title: "Email Us", lines: ["info@wednest.com", "help@wednest.com"] },
+          { icon: "✉️", title: "Email Us", lines: ["info@keralakara.com", "help@keralakara.com"] },
           { icon: "⏰", title: "Working Hours", lines: ["Mon – Sat: 9:00 AM – 8:00 PM", "Sunday: 10:00 AM – 4:00 PM"] },
         ].map(c => (
           <div className="contact-info-card" key={c.title}>
@@ -111,7 +111,7 @@ export default function Contact() {
       {/* Map */}
       <div className="contact-map">
         <iframe
-          title="WedNest Location"
+          title="KM Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0!2d76.2673!3d9.9816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDU4JzUzLjgiTiA3NsKwMTYnMDIuMyJF!5e0!3m2!1sen!2sin!4v1234567890"
           allowFullScreen=""
           loading="lazy"

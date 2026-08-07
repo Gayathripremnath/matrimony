@@ -21,10 +21,11 @@ export default function Footer() {
         <div className="eb-footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#membership">Membership Plans</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="/Search">Search</a></li>
+            <li><a href="/membership">Membership </a></li>
+            <li><a href="/registration">Register</a></li>
+            <li><a href="profiles">Profile</a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
 
